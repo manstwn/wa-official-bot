@@ -957,7 +957,7 @@ function syntaxHighlightJson(jsonObj) {
 
   // Open modal & load config
   async function openModal() {
-    modal.classList.add('active');
+    modal.classList.add('open');
     try {
       const res  = await fetch('/api/config');
       const data = await res.json();
@@ -977,7 +977,7 @@ function syntaxHighlightJson(jsonObj) {
   }
 
   function closeModal() {
-    modal.classList.remove('active');
+    modal.classList.remove('open');
     saveStatus.className = 'ai-cfg-save-status';
     saveStatus.textContent = '';
   }
